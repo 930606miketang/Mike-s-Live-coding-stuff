@@ -1,0 +1,6 @@
+s0.initCam()
+src(s0).luma(0.75).add(gradient(10)).out(o0)
+voronoi(50).out(o1)
+osc(10,0,1).hue(0.5).layer(osc(10,0,1).mask(shape(4,0.5,0.001))).out(o3)
+osc(134).out(o2)
+render()
