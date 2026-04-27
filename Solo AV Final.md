@@ -1,13 +1,13 @@
 - Bass
 stack(
-  note ( "g1 d1 f2 g2 c2 d4 g3 a4 c4 d3 bb3 g3")
+  note ( "g1 ")
   .sound("sine")
   .room("3")
   .cpm(30)
   .pan(sine.slow(1)) 
 )
 
-- Drum 
+- Drum & Chords
 $: s("[bd sd | bd!4 | bd [sd hh | hh!2] sd hh | ht [mt ht mt] lt cr]")
   .bank("<9000>")
   //.gain(.07)
@@ -15,16 +15,14 @@ $: s("[bd sd | bd!4 | bd [sd hh | hh!2] sd hh | ht [mt ht mt] lt cr]")
   .room(.07)
   .color("pink")
 
+let chords = chord("<Cm7 [FM7 | Am7] [Cm7 | EbM7] Bb7>")
+$: chords.struct("- x [- | x] x").voicing().sound("gm_fx_atmosphere").gain(.2).lpf(1000).room(1)
+
 
 sound banks :
 RolandTR808
 RolandTR909
 
-
-- Chords
-
-let chords = chord("<Cm7 [FM7 | Am7] [Cm7 | EbM7] Bb7>")
-$: chords.struct("- x [- | x] x").voicing().sound("gm_fx_atmosphere").gain(.2).lpf(1000).room(1)
 
 
 
