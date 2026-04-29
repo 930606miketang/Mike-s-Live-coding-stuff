@@ -15,16 +15,14 @@ $: s("[bd sd | bd!4 | bd [sd hh | hh!2] sd hh | ht [mt ht mt] lt cr]")
   .room(.07)
   .color("pink")
 
-let chords = chord("<Cm7 [FM7 | Am7] [Cm7 | EbM7] Bb7>")
-$: chords.struct("- x [- | x] x").voicing().sound("gm_fx_atmosphere").gain(.2).lpf(1000).room(1)
-
-
-sound banks :
-RolandTR808
-RolandTR909
-
-
-
+  let chords = chord("<Cm7 [FM7 | Am7] [Cm7 | EbM7] Bb7>")
+  $: chords.struct("- x [- | x] x").voicing().sound("gm_fx_atmosphere").gain(.2).lpf(1000).room(1)
+  
+  
+  sound banks :
+  RolandTR808
+  RolandTR909
+  
 
 
 
@@ -51,7 +49,7 @@ osc(8, 0.08, 0.7)
   .out()
 
   
-kaleid(4)     // 3, 4, 6, 8
-osc(8...)     // low = slow、big；high = thin、spik
-color(...)    // emotion
-blend(...,0.25) // 0.1 to 0.5
+  kaleid(4)     // 3, 4, 6, 8
+  osc(8...)     // low = slow、big；high = thin、spik
+  color(...)    // emotion
+  blend(...,0.25) // 0.1 to 0.5
